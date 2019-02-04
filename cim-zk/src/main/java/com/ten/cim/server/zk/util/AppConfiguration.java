@@ -1,14 +1,10 @@
-package com.crossoverjie.cim.server.zk.util;
+package com.ten.cim.server.zk.util;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * Function:
- *
- * @author crossoverJie
- *         Date: 2018/8/24 01:43
- * @since JDK 1.8
+ * zookeeper配置信息
  */
 @Component
 public class AppConfiguration {

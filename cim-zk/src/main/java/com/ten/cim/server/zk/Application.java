@@ -1,8 +1,8 @@
-package com.crossoverjie.cim.server.zk;
+package com.ten.cim.server.zk;
 
-import com.crossoverjie.cim.server.zk.util.AppConfiguration;
-import com.crossoverjie.cim.server.zk.thread.RegistryZK;
-import com.crossoverjie.cim.server.zk.util.ZKit;
+import com.ten.cim.server.zk.util.AppConfiguration;
+import com.ten.cim.server.zk.thread.RegistryZK;
+import com.ten.cim.server.zk.util.ZKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

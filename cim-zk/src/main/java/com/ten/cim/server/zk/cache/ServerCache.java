@@ -1,6 +1,6 @@
-package com.crossoverjie.cim.server.zk.cache;
+package com.ten.cim.server.zk.cache;
 
-import com.crossoverjie.cim.server.zk.util.ZKit;
+import com.ten.cim.server.zk.util.ZKit;
 import com.google.common.cache.LoadingCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,15 +11,10 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Function: 服务器节点缓存
- *
- * @author crossoverJie
- *         Date: 2018/8/19 01:31
- * @since JDK 1.8
+ * 服务器节点缓存
  */
 @Component
 public class ServerCache {
-
 
     @Autowired
     private LoadingCache<String, String> cache;
@@ -29,16 +24,12 @@ public class ServerCache {
 
     private AtomicLong index = new AtomicLong();
 
-
     public void addCache(String key) {
         cache.put(key, key);
     }
 
-
     /**
-     * 更新所有缓存/先删除 再新增
-     *
-     * @param currentChilds
+     * 更新所有缓存：先删除 再新增
      */
     public void updateCache(List<String> currentChilds) {
         cache.invalidateAll();
@@ -51,11 +42,8 @@ public class ServerCache {
 
     /**
      * 获取所有的服务列表
-     *
-     * @return
      */
     public List<String> getAll() {
-
         List<String> list = new ArrayList<>();
 
         if (cache.size() == 0) {
@@ -69,13 +57,10 @@ public class ServerCache {
             list.add(entry.getKey());
         }
         return list;
-
     }
 
     /**
      * 选取服务器
-     *
-     * @return
      */
     public String selectServer() {
         List<String> all = getAll();

@@ -37,7 +37,6 @@ import javax.annotation.PostConstruct;
  */
 @Component
 public class CIMClient {
-
     private final static Logger LOGGER = LoggerFactory.getLogger(CIMClient.class);
 
     private EventLoopGroup group = new NioEventLoopGroup(0, new DefaultThreadFactory("cim-work"));
