@@ -7,22 +7,18 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Function:
- *
- * @author crossoverJie
- *         Date: 22/05/2018 18:33
- * @since JDK 1.8
+ * session和channel用户组
  */
 public class SessionSocketHolder {
     private static final Map<Long, NioSocketChannel> CHANNEL_MAP = new ConcurrentHashMap<>(16);
     private static final Map<Long, String> SESSION_MAP = new ConcurrentHashMap<>(16);
 
-    public static void saveSession(Long userId,String userName){
+    public static void saveSession(Long userId, String userName) {
         SESSION_MAP.put(userId, userName);
     }
 
-    public static void removeSession(Long userId){
-        SESSION_MAP.remove(userId) ;
+    public static void removeSession(Long userId) {
+        SESSION_MAP.remove(userId);
     }
 
     public static void put(Long id, NioSocketChannel socketChannel) {
@@ -43,23 +39,23 @@ public class SessionSocketHolder {
 
     /**
      * 获取注册用户信息
+     *
      * @param nioSocketChannel
      * @return
      */
-    public static CIMUserInfo getUserId(NioSocketChannel nioSocketChannel){
+    public static CIMUserInfo getUserId(NioSocketChannel nioSocketChannel) {
         for (Map.Entry<Long, NioSocketChannel> entry : CHANNEL_MAP.entrySet()) {
             NioSocketChannel value = entry.getValue();
-            if (nioSocketChannel == value){
+            if (nioSocketChannel == value) {
                 Long key = entry.getKey();
                 String userName = SESSION_MAP.get(key);
-                CIMUserInfo info = new CIMUserInfo(key,userName) ;
-                return info ;
+                CIMUserInfo info = new CIMUserInfo(key, userName);
+                return info;
             }
         }
 
         return null;
     }
-
 
 
 }

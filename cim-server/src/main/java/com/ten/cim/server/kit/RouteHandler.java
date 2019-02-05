@@ -14,42 +14,29 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 /**
- * Function:
- *
- * @author crossoverJie
- * Date: 2019-01-20 17:20
- * @since JDK 1.8
+ * 路由控制器
  */
 @Component
 public class RouteHandler {
     private final static Logger LOGGER = LoggerFactory.getLogger(RouteHandler.class);
 
-
     private final MediaType mediaType = MediaType.parse("application/json");
 
     /**
      * 用户下线
-     * @param userInfo
-     * @param channel
-     * @throws IOException
      */
     public void userOffLine(CIMUserInfo userInfo, NioSocketChannel channel) throws IOException {
-        if (userInfo != null){
+        if (userInfo != null) {
             LOGGER.info("用户[{}]下线", userInfo.getUserName());
             SessionSocketHolder.removeSession(userInfo.getUserId());
             //清除路由关系
             clearRouteInfo(userInfo);
         }
         SessionSocketHolder.remove(channel);
-
     }
-
 
     /**
      * 清除路由关系
-     *
-     * @param userInfo
-     * @throws IOException
      */
     private void clearRouteInfo(CIMUserInfo userInfo) throws IOException {
         OkHttpClient okHttpClient = SpringBeanFactory.getBean(OkHttpClient.class);

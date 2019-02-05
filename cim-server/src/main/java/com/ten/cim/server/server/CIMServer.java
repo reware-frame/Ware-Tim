@@ -23,30 +23,20 @@ import javax.annotation.PreDestroy;
 import java.net.InetSocketAddress;
 
 /**
- * Function:
- *
- * @author crossoverJie
- *         Date: 21/05/2018 00:30
- * @since JDK 1.8
+ * netty 服务器
  */
 @Component
 public class CIMServer {
-
     private final static Logger LOGGER = LoggerFactory.getLogger(CIMServer.class);
 
     private EventLoopGroup boss = new NioEventLoopGroup();
     private EventLoopGroup work = new NioEventLoopGroup();
 
-
     @Value("${cim.server.port}")
     private int nettyPort;
 
-
     /**
      * 启动 cim server
-     *
-     * @return
-     * @throws InterruptedException
      */
     @PostConstruct
     public void start() throws InterruptedException {
@@ -65,7 +55,6 @@ public class CIMServer {
         }
     }
 
-
     /**
      * 销毁
      */
@@ -76,12 +65,12 @@ public class CIMServer {
         LOGGER.info("关闭 cim server 成功");
     }
 
-
     /**
      * 发送 Google Protocol 编码消息
+     *
      * @param sendMsgReqVO 消息
      */
-    public void sendMsg(SendMsgReqVO sendMsgReqVO){
+    public void sendMsg(SendMsgReqVO sendMsgReqVO) {
         NioSocketChannel socketChannel = SessionSocketHolder.get(sendMsgReqVO.getUserId());
 
         if (null == socketChannel) {

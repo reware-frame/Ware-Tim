@@ -4,11 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * Function:
- *
- * @author crossoverJie
- *         Date: 2018/8/24 01:43
- * @since JDK 1.8
+ * zookeeper配置信息
  */
 @Component
 public class AppConfiguration {
@@ -26,10 +22,10 @@ public class AppConfiguration {
     private int cimServerPort;
 
     @Value("${cim.clear.route.request.url}")
-    private String clearRouteUrl ;
+    private String clearRouteUrl;
 
     @Value("${cim.heartbeat.time}")
-    private long heartBeatTime ;
+    private long heartBeatTime;
 
     public String getClearRouteUrl() {
         return clearRouteUrl;

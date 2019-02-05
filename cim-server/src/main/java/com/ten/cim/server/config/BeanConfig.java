@@ -11,25 +11,22 @@ import org.springframework.context.annotation.Configuration;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Function:
- *
- * @author crossoverJie
- *         Date: 2018/12/23 00:25
- * @since JDK 1.8
+ * bean配置信息
  */
 @Configuration
 public class BeanConfig {
 
     @Autowired
-    private AppConfiguration appConfiguration ;
+    private AppConfiguration appConfiguration;
 
     @Bean
-    public ZkClient buildZKClient(){
+    public ZkClient buildZKClient() {
         return new ZkClient(appConfiguration.getZkAddr(), 5000);
     }
 
     /**
      * http client
+     *
      * @return okHttp
      */
     @Bean
@@ -37,15 +34,13 @@ public class BeanConfig {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10,TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(true);
         return builder.build();
     }
 
-
     /**
      * 创建心跳单例
-     * @return
      */
     @Bean(value = "heartBeat")
     public CIMRequestProto.CIMReqProtocol heartBeat() {
