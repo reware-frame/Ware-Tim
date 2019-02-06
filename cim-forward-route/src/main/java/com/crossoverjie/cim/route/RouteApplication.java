@@ -1,6 +1,6 @@
-package com.crossoverjie.cim.route;
+package com.ten.cim.route;
 
-import com.crossoverjie.cim.route.kit.ServerListListener;
+import com.ten.cim.route.kit.ServerListListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author crossoverJie
+ * @author ten
  */
 @SpringBootApplication
 public class RouteApplication implements CommandLineRunner{

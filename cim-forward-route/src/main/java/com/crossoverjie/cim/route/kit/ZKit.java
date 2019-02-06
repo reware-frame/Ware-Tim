@@ -1,7 +1,7 @@
-package com.crossoverjie.cim.route.kit;
+package com.ten.cim.route.kit;
 
 import com.alibaba.fastjson.JSON;
-import com.crossoverjie.cim.route.cache.ServerCache;
+import com.ten.cim.route.cache.ServerCache;
 import org.I0Itec.zkclient.IZkChildListener;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Function: Zookeeper 工具
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/8/19 00:33
  * @since JDK 1.8
  */

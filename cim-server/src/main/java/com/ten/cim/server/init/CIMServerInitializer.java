@@ -1,6 +1,6 @@
 package com.ten.cim.server.init;
 
-import com.crossoverjie.cim.common.protocol.CIMRequestProto;
+import com.ten.cim.common.protocol.CIMRequestProto;
 import com.ten.cim.server.handle.CIMServerHandle;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;

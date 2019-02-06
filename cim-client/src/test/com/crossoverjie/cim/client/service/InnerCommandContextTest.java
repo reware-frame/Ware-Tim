@@ -1,7 +1,7 @@
-package com.crossoverjie.cim.client.service;
+package com.ten.cim.client.service;
 
-import com.crossoverjie.cim.client.CIMClientApplication;
-import com.crossoverjie.cim.common.enums.SystemCommandEnum;
+import com.ten.cim.client.CIMClientApplication;
+import com.ten.cim.common.enums.SystemCommandEnum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class InnerCommandContextTest {
 
     @Test
     public void execute5() {
-        String msg = ":q crossoverJie";
+        String msg = ":q ten";
         InnerCommand execute = context.getInstance(msg);
         execute.process(msg) ;
     }

@@ -2,7 +2,7 @@ package com.ten.cim.client.thread;
 
 import com.ten.cim.client.service.impl.ClientHeartBeatHandlerImpl;
 import com.ten.cim.client.util.SpringBeanFactory;
-import com.crossoverjie.cim.common.kit.HeartBeatHandler;
+import com.ten.cim.common.kit.HeartBeatHandler;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  * Date: 2019-01-20 21:35
  * @since JDK 1.8
  */

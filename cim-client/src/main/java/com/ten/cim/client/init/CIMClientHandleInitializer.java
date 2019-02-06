@@ -1,7 +1,7 @@
 package com.ten.cim.client.init;
 
 import com.ten.cim.client.handle.CIMClientHandle;
-import com.crossoverjie.cim.common.protocol.CIMResponseProto;
+import com.ten.cim.common.protocol.CIMResponseProto;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
@@ -13,7 +13,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 23/02/2018 22:47
  * @since JDK 1.8
  */
@@ -24,7 +24,7 @@ public class CIMClientHandleInitializer extends ChannelInitializer<Channel> {
     @Override
     protected void initChannel(Channel ch) throws Exception {
         ch.pipeline()
-                //10 秒没发送消息 将IdleStateHandler 添加到 ChannelPipeline 中
+                // 10 秒没发送消息 将IdleStateHandler 添加到 ChannelPipeline 中
                 .addLast(new IdleStateHandler(0, 10, 0))
 
                 //心跳解码

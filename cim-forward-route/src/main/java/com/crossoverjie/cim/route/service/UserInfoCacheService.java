@@ -1,13 +1,13 @@
-package com.crossoverjie.cim.route.service;
+package com.ten.cim.route.service;
 
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.common.pojo.CIMUserInfo;
 
 import java.util.Set;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/24 11:06
  * @since JDK 1.8
  */

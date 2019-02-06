@@ -1,6 +1,6 @@
-package com.crossoverjie.cim.route.cache;
+package com.ten.cim.route.cache;
 
-import com.crossoverjie.cim.route.kit.ZKit;
+import com.ten.cim.route.kit.ZKit;
 import com.google.common.cache.LoadingCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * Function: 服务器节点缓存
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/8/19 01:31
  * @since JDK 1.8
  */

@@ -2,14 +2,14 @@ package com.ten.cim.client.service.impl;
 
 import com.ten.cim.client.client.CIMClient;
 import com.ten.cim.client.config.AppConfiguration;
-import com.crossoverjie.cim.client.service.*;
+import com.ten.cim.client.service.*;
 import com.ten.cim.client.service.*;
 import com.ten.cim.client.vo.req.GroupReqVO;
 import com.ten.cim.client.vo.req.P2PReqVO;
 import com.ten.cim.client.vo.res.OnlineUsersResVO;
-import com.crossoverjie.cim.common.data.construct.TrieTree;
-import com.crossoverjie.cim.common.enums.SystemCommandEnum;
-import com.crossoverjie.cim.common.util.StringUtil;
+import com.ten.cim.common.data.construct.TrieTree;
+import com.ten.cim.common.enums.SystemCommandEnum;
+import com.ten.cim.common.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  * Date: 2018/12/26 11:15
  * @since JDK 1.8
  */

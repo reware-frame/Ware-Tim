@@ -1,11 +1,11 @@
 package com.ten.cim.client.vo.req;
 
-import com.crossoverjie.cim.common.req.BaseRequest;
+import com.ten.cim.common.req.BaseRequest;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 22:30
  * @since JDK 1.8
  */

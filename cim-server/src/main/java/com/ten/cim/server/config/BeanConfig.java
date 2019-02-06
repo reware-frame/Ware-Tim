@@ -1,7 +1,7 @@
 package com.ten.cim.server.config;
 
-import com.crossoverjie.cim.common.constant.Constants;
-import com.crossoverjie.cim.common.protocol.CIMRequestProto;
+import com.ten.cim.common.constant.Constants;
+import com.ten.cim.common.protocol.CIMRequestProto;
 import okhttp3.OkHttpClient;
 import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.annotation.Autowired;

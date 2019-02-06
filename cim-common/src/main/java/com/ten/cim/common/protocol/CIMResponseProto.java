@@ -431,7 +431,7 @@ public final class CIMResponseProto {
                 CIMResProtocol.class, Builder.class);
       }
 
-      // Construct using com.crossoverjie.cim.common.protocol.CIMResponseProto.CIMResProtocol.newBuilder()
+      // Construct using com.ten.cim.common.protocol.CIMResponseProto.CIMResProtocol.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }

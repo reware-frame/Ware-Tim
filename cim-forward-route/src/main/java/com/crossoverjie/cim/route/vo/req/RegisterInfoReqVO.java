@@ -1,6 +1,6 @@
-package com.crossoverjie.cim.route.vo.req;
+package com.ten.cim.route.vo.req;
 
-import com.crossoverjie.cim.common.req.BaseRequest;
+import com.ten.cim.common.req.BaseRequest;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 22:04
  * @since JDK 1.8
  */

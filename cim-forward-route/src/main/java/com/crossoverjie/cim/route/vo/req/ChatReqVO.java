@@ -1,6 +1,6 @@
-package com.crossoverjie.cim.route.vo.req;
+package com.ten.cim.route.vo.req;
 
-import com.crossoverjie.cim.common.req.BaseRequest;
+import com.ten.cim.common.req.BaseRequest;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Function: Google Protocol 编解码发送
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/05/21 15:56
  * @since JDK 1.8
  */

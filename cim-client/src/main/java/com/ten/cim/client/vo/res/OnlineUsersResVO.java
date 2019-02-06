@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/26 23:17
  * @since JDK 1.8
  */
@@ -16,7 +16,7 @@ public class OnlineUsersResVO {
      * code : 9000
      * message : 成功
      * reqNo : null
-     * dataBody : [{"userId":1545574841528,"userName":"zhangsan"},{"userId":1545574871143,"userName":"crossoverJie"}]
+     * dataBody : [{"userId":1545574841528,"userName":"zhangsan"},{"userId":1545574871143,"userName":"ten"}]
      */
 
     private String code;

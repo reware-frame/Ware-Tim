@@ -431,7 +431,7 @@ public final class CIMRequestProto {
                 CIMReqProtocol.class, Builder.class);
       }
 
-      // Construct using com.crossoverjie.cim.common.protocol.CIMRequestProto.CIMReqProtocol.newBuilder()
+      // Construct using com.ten.cim.common.protocol.CIMRequestProto.CIMReqProtocol.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }

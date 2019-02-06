@@ -1,10 +1,11 @@
 package com.ten.cim.common.enums;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author crossoverJie
+ * @author ten
  */
 
 public enum StatusEnum {
@@ -101,11 +102,7 @@ public enum StatusEnum {
      * @return 全部枚举值。
      */
     public static List<StatusEnum> getAllStatus() {
-        List<StatusEnum> list = new ArrayList<StatusEnum>();
-        for (StatusEnum status : values()) {
-            list.add(status);
-        }
-        return list;
+        return new ArrayList<>(Arrays.asList(values()));
     }
 
     /**

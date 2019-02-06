@@ -1,11 +1,11 @@
-package com.crossoverjie.cim.route.vo.res;
+package com.ten.cim.route.vo.res;
 
 import java.io.Serializable;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 21:54
  * @since JDK 1.8
  */

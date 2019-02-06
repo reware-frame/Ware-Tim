@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/21 16:44
  * @since JDK 1.8
  */

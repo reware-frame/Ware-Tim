@@ -1,7 +1,7 @@
 package com.ten.cim.server.zk.controller;
 
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.common.res.BaseResponse;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.common.res.BaseResponse;
 import com.ten.cim.server.zk.cache.ServerCache;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.ten.cim.server.server;
 
-import com.crossoverjie.cim.common.constant.Constants;
-import com.crossoverjie.cim.common.protocol.CIMRequestProto;
+import com.ten.cim.common.constant.Constants;
+import com.ten.cim.common.protocol.CIMRequestProto;
 import com.ten.cim.server.init.CIMServerInitializer;
 import com.ten.cim.server.util.SessionSocketHolder;
 import com.ten.cim.server.vo.req.SendMsgReqVO;

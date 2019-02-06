@@ -6,12 +6,14 @@ import java.util.Map;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/26 18:38
  * @since JDK 1.8
  */
 public enum SystemCommandEnum {
-
+    /**
+     * 指令
+     */
             ALL(":all       ","获取所有命令","PrintAllCommand"),
     ONLINE_USER(":olu       ","获取所有在线用户","PrintOnlineUsersCommand"),
            QUIT(":q!        ","退出程序","ShutDownCommand"),
@@ -101,7 +103,7 @@ public enum SystemCommandEnum {
     public static Map<String,String> getAllClazz() {
         Map<String,String> map = new HashMap<String, String>(16) ;
         for (SystemCommandEnum status : values()) {
-            map.put(status.getCommandType().trim(),"com.crossoverjie.cim.client.service.impl.command." + status.getClazz()) ;
+            map.put(status.getCommandType().trim(),"com.ten.cim.client.service.impl.command." + status.getClazz()) ;
         }
         return map;
     }

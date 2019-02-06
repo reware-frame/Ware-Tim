@@ -1,4 +1,4 @@
-package com.crossoverjie.cim.route.config;
+package com.ten.cim.route.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/8/24 01:43
  * @since JDK 1.8
  */

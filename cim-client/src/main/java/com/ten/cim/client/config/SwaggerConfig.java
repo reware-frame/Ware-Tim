@@ -24,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crossoverjie.netty.action.client.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ten.netty.action.client.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -33,8 +33,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("sbc order api")
                 .description("sbc order api")
-                .termsOfServiceUrl("http://crossoverJie.top")
-                .contact("crossoverJie")
+                .termsOfServiceUrl("http://ten.top")
+                .contact("ten")
                 .version("1.0.0")
                 .build();
     }

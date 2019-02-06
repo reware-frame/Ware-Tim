@@ -9,8 +9,8 @@ import com.ten.cim.client.vo.req.LoginReqVO;
 import com.ten.cim.client.vo.req.P2PReqVO;
 import com.ten.cim.client.vo.res.CIMServerResVO;
 import com.ten.cim.client.vo.res.OnlineUsersResVO;
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.common.res.BaseResponse;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.common.res.BaseResponse;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/22 22:27
  * @since JDK 1.8
  */

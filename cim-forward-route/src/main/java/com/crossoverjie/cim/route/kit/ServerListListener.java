@@ -1,14 +1,14 @@
-package com.crossoverjie.cim.route.kit;
+package com.ten.cim.route.kit;
 
-import com.crossoverjie.cim.route.config.AppConfiguration;
-import com.crossoverjie.cim.route.util.SpringBeanFactory;
+import com.ten.cim.route.config.AppConfiguration;
+import com.ten.cim.route.util.SpringBeanFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 00:35
  * @since JDK 1.8
  */

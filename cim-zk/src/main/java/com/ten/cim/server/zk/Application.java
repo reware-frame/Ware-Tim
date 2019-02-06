@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.net.InetAddress;
 
 /**
- * @author crossoverJie
+ * @author ten
  */
 @SpringBootApplication
 public class Application implements CommandLineRunner{

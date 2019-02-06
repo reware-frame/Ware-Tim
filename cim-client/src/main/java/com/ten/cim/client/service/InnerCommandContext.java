@@ -2,8 +2,8 @@ package com.ten.cim.client.service;
 
 import com.ten.cim.client.service.impl.command.PrintAllCommand;
 import com.ten.cim.client.util.SpringBeanFactory;
-import com.crossoverjie.cim.common.enums.SystemCommandEnum;
-import com.crossoverjie.cim.common.util.StringUtil;
+import com.ten.cim.common.enums.SystemCommandEnum;
+import com.ten.cim.common.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  * Date: 2019-01-27 19:39
  * @since JDK 1.8
  */

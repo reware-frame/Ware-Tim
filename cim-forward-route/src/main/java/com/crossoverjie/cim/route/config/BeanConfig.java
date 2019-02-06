@@ -1,4 +1,4 @@
-package com.crossoverjie.cim.route.config;
+package com.ten.cim.route.config;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 00:25
  * @since JDK 1.8
  */

@@ -1,4 +1,4 @@
-package com.crossoverjie.cim.server.util;
+package com.ten.cim.server.util;
 
 
 import org.junit.Test;

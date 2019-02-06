@@ -8,8 +8,8 @@ import com.ten.cim.client.service.impl.ClientInfo;
 import com.ten.cim.client.vo.req.GoogleProtocolVO;
 import com.ten.cim.client.vo.req.LoginReqVO;
 import com.ten.cim.client.vo.res.CIMServerResVO;
-import com.crossoverjie.cim.common.constant.Constants;
-import com.crossoverjie.cim.common.protocol.CIMRequestProto;
+import com.ten.cim.common.constant.Constants;
+import com.ten.cim.common.protocol.CIMRequestProto;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -31,7 +31,7 @@ import javax.annotation.PostConstruct;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  * Date: 22/05/2018 14:19
  * @since JDK 1.8
  */
@@ -208,7 +208,7 @@ public class CIMClient {
      * @throws InterruptedException
      */
     public void close() throws InterruptedException {
-        if (channel != null){
+        if (channel != null) {
             channel.close();
         }
     }

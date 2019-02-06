@@ -5,7 +5,7 @@ import com.ten.cim.client.service.CustomMsgHandleListener;
 /**
  * Function:消息回调 bean
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/26 17:37
  * @since JDK 1.8
  */

@@ -1,9 +1,9 @@
-package com.crossoverjie.cim.route.vo.res;
+package com.ten.cim.route.vo.res;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2017/6/26 15:43
  * @since JDK 1.8
  */

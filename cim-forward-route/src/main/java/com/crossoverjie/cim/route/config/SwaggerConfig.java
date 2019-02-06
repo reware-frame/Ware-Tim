@@ -1,4 +1,4 @@
-package com.crossoverjie.cim.route.config;
+package com.ten.cim.route.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crossoverjie.cim.route.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ten.cim.route.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -33,8 +33,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("cim-forward-route")
                 .description("cim-forward-route api")
-                .termsOfServiceUrl("http://crossoverJie.top")
-                .contact("crossoverJie")
+                .termsOfServiceUrl("http://ten.top")
+                .contact("ten")
                 .version("1.0.0")
                 .build();
     }

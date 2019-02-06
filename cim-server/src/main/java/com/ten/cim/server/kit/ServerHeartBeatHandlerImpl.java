@@ -1,8 +1,8 @@
 package com.ten.cim.server.kit;
 
-import com.crossoverjie.cim.common.kit.HeartBeatHandler;
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
-import com.crossoverjie.cim.common.util.NettyAttrUtil;
+import com.ten.cim.common.kit.HeartBeatHandler;
+import com.ten.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.common.util.NettyAttrUtil;
 import com.ten.cim.server.config.AppConfiguration;
 import com.ten.cim.server.util.SessionSocketHolder;
 import io.netty.channel.ChannelHandlerContext;

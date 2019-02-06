@@ -6,7 +6,7 @@ import com.ten.cim.client.vo.req.P2PReqVO;
 /**
  * Function:消息处理器
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/26 11:11
  * @since JDK 1.8
  */

@@ -1,7 +1,7 @@
-package com.crossoverjie.cim.client.service.impl;
+package com.ten.cim.client.service.impl;
 
-import com.crossoverjie.cim.client.CIMClientApplication;
-import com.crossoverjie.cim.client.service.MsgLogger;
+import com.ten.cim.client.CIMClientApplication;
+import com.ten.cim.client.service.MsgLogger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +32,8 @@ public class AsyncMsgLoggerTest {
 
     @Test
     public void query(){
-        String crossoverJie = msgLogger.query("crossoverJie");
-        System.out.println(crossoverJie);
+        String ten = msgLogger.query("ten");
+        System.out.println(ten);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.crossoverjie.cim.route.util;
+package com.ten.cim.route.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

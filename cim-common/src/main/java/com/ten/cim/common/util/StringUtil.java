@@ -3,8 +3,8 @@ package com.ten.cim.common.util;
 /**
  * Function:
  *
- * @author crossoverJie
- *         Date: 22/05/2018 15:16
+ * @author ten
+ * Date: 22/05/2018 15:16
  * @since JDK 1.8
  */
 public class StringUtil {
@@ -24,6 +24,6 @@ public class StringUtil {
     }
 
     public static String formatLike(String str) {
-        return isNotEmpty(str)?"%" + str + "%":null;
+        return isNotEmpty(str) ? "%" + str + "%" : null;
     }
 }

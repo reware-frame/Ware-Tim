@@ -1,9 +1,9 @@
-package com.crossoverjie.cim.server.test;
+package com.ten.cim.server.test;
 
-import com.crossoverjie.cim.client.CIMClientApplication;
-import com.crossoverjie.cim.client.service.RouteRequest;
-import com.crossoverjie.cim.client.vo.req.LoginReqVO;
-import com.crossoverjie.cim.client.vo.res.CIMServerResVO;
+import com.ten.cim.client.CIMClientApplication;
+import com.ten.cim.client.service.RouteRequest;
+import com.ten.cim.client.vo.req.LoginReqVO;
+import com.ten.cim.client.vo.res.CIMServerResVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 22:39
  * @since JDK 1.8
  */

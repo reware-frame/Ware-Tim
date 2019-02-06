@@ -24,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crossoverjie.netty.action.zk.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ten.netty.action.zk.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -33,8 +33,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("netty-action-zk api")
                 .description("netty-action-zk api")
-                .termsOfServiceUrl("https://crossoverJie.top")
-                .contact("crossoverJie")
+                .termsOfServiceUrl("https://ten.top")
+                .contact("ten")
                 .version("1.0.0")
                 .build();
     }

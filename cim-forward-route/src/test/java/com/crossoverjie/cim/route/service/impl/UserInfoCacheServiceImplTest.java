@@ -1,9 +1,9 @@
-package com.crossoverjie.cim.route.service.impl;
+package com.ten.cim.route.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
-import com.crossoverjie.cim.route.RouteApplication;
-import com.crossoverjie.cim.route.service.UserInfoCacheService;
+import com.ten.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.route.RouteApplication;
+import com.ten.cim.route.service.UserInfoCacheService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

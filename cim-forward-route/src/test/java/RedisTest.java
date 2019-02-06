@@ -1,4 +1,4 @@
-import com.crossoverjie.cim.route.RouteApplication;
+import com.ten.cim.route.RouteApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 21:40
  * @since JDK 1.8
  */

@@ -1,6 +1,6 @@
 package com.ten.cim.server.util;
 
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.common.pojo.CIMUserInfo;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.util.Map;

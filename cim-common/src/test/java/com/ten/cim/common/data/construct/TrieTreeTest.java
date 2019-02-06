@@ -312,7 +312,7 @@ public class TrieTreeTest {
     @Test
     public void prefixSearch10() throws Exception {
         TrieTree trieTree = new TrieTree();
-        trieTree.insert("crossoverJie");
+        trieTree.insert("ten");
         trieTree.insert("zhangsan");
 
         List<String> ab = trieTree.prefixSearch("c");
@@ -321,7 +321,7 @@ public class TrieTreeTest {
             result += s + ",";
             System.out.println(s);
         }
-        Assert.assertTrue(result.equals("crossoverJie,"));
+        Assert.assertTrue(result.equals("ten,"));
     }
 
 }

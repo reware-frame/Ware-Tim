@@ -2,9 +2,9 @@ package com.ten.cim.client.config;
 
 import com.ten.cim.client.handle.MsgHandleCaller;
 import com.ten.cim.client.service.impl.MsgCallBackListener;
-import com.crossoverjie.cim.common.constant.Constants;
-import com.crossoverjie.cim.common.protocol.CIMRequestProto;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import com.ten.cim.common.constant.Constants;
+import com.ten.cim.common.protocol.CIMRequestProto;
 import okhttp3.OkHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,7 @@ import java.util.concurrent.*;
 /**
  * Function:bean 配置
  *
- * @author crossoverJie
+ * @author ten
  * Date: 24/05/2018 15:55
  * @since JDK 1.8
  */

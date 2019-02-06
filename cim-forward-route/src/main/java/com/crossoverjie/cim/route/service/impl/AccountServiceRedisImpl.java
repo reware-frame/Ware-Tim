@@ -1,15 +1,15 @@
-package com.crossoverjie.cim.route.service.impl;
+package com.ten.cim.route.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.common.exception.CIMException;
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
-import com.crossoverjie.cim.route.service.AccountService;
-import com.crossoverjie.cim.route.service.UserInfoCacheService;
-import com.crossoverjie.cim.route.vo.req.ChatReqVO;
-import com.crossoverjie.cim.route.vo.req.LoginReqVO;
-import com.crossoverjie.cim.route.vo.res.CIMServerResVO;
-import com.crossoverjie.cim.route.vo.res.RegisterInfoResVO;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.common.exception.CIMException;
+import com.ten.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.route.service.AccountService;
+import com.ten.cim.route.service.UserInfoCacheService;
+import com.ten.cim.route.vo.req.ChatReqVO;
+import com.ten.cim.route.vo.req.LoginReqVO;
+import com.ten.cim.route.vo.res.CIMServerResVO;
+import com.ten.cim.route.vo.res.RegisterInfoResVO;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,14 +25,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.crossoverjie.cim.common.enums.StatusEnum.OFF_LINE;
-import static com.crossoverjie.cim.route.constant.Constant.ACCOUNT_PREFIX;
-import static com.crossoverjie.cim.route.constant.Constant.ROUTE_PREFIX;
+import static com.ten.cim.common.enums.StatusEnum.OFF_LINE;
+import static com.ten.cim.route.constant.Constant.ACCOUNT_PREFIX;
+import static com.ten.cim.route.constant.Constant.ROUTE_PREFIX;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 21:58
  * @since JDK 1.8
  */

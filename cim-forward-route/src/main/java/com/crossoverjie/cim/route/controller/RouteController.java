@@ -1,19 +1,19 @@
-package com.crossoverjie.cim.route.controller;
+package com.ten.cim.route.controller;
 
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.common.exception.CIMException;
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
-import com.crossoverjie.cim.common.res.BaseResponse;
-import com.crossoverjie.cim.common.res.NULLBody;
-import com.crossoverjie.cim.route.cache.ServerCache;
-import com.crossoverjie.cim.route.service.AccountService;
-import com.crossoverjie.cim.route.service.UserInfoCacheService;
-import com.crossoverjie.cim.route.vo.req.ChatReqVO;
-import com.crossoverjie.cim.route.vo.req.LoginReqVO;
-import com.crossoverjie.cim.route.vo.req.P2PReqVO;
-import com.crossoverjie.cim.route.vo.req.RegisterInfoReqVO;
-import com.crossoverjie.cim.route.vo.res.CIMServerResVO;
-import com.crossoverjie.cim.route.vo.res.RegisterInfoResVO;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.common.exception.CIMException;
+import com.ten.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.common.res.BaseResponse;
+import com.ten.cim.common.res.NULLBody;
+import com.ten.cim.route.cache.ServerCache;
+import com.ten.cim.route.service.AccountService;
+import com.ten.cim.route.service.UserInfoCacheService;
+import com.ten.cim.route.vo.req.ChatReqVO;
+import com.ten.cim.route.vo.req.LoginReqVO;
+import com.ten.cim.route.vo.req.P2PReqVO;
+import com.ten.cim.route.vo.req.RegisterInfoReqVO;
+import com.ten.cim.route.vo.res.CIMServerResVO;
+import com.ten.cim.route.vo.res.RegisterInfoResVO;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,7 @@ import java.util.Set;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 22/05/2018 14:46
  * @since JDK 1.8
  */

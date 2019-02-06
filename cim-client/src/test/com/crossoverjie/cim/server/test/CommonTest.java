@@ -1,9 +1,9 @@
-package com.crossoverjie.cim.server.test;
+package com.ten.cim.server.test;
 
 
 import com.alibaba.fastjson.JSON;
-import com.crossoverjie.cim.client.vo.res.CIMServerResVO;
-import com.crossoverjie.cim.client.vo.res.OnlineUsersResVO;
+import com.ten.cim.client.vo.res.CIMServerResVO;
+import com.ten.cim.client.vo.res.OnlineUsersResVO;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 22/05/2018 18:44
  * @since JDK 1.8
  */
@@ -52,7 +52,7 @@ public class CommonTest {
 
         bodyBean = new OnlineUsersResVO.DataBodyBean();
         bodyBean.setUserId(200L);
-        bodyBean.setUserName("crossoverJie");
+        bodyBean.setUserName("ten");
         onlineUsers.add(bodyBean) ;
 
         LOGGER.info("list={}",JSON.toJSONString(onlineUsers));

@@ -1,17 +1,17 @@
-package com.crossoverjie.cim.route.service;
+package com.ten.cim.route.service;
 
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.route.vo.req.ChatReqVO;
-import com.crossoverjie.cim.route.vo.req.LoginReqVO;
-import com.crossoverjie.cim.route.vo.res.CIMServerResVO;
-import com.crossoverjie.cim.route.vo.res.RegisterInfoResVO;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.route.vo.req.ChatReqVO;
+import com.ten.cim.route.vo.req.LoginReqVO;
+import com.ten.cim.route.vo.res.CIMServerResVO;
+import com.ten.cim.route.vo.res.RegisterInfoResVO;
 
 import java.util.Map;
 
 /**
  * Function: 账户服务
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/23 21:57
  * @since JDK 1.8
  */

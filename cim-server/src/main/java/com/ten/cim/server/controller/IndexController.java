@@ -1,9 +1,9 @@
 package com.ten.cim.server.controller;
 
-import com.crossoverjie.cim.common.enums.StatusEnum;
-import com.crossoverjie.cim.common.res.BaseResponse;
+import com.ten.cim.common.enums.StatusEnum;
+import com.ten.cim.common.res.BaseResponse;
 import com.ten.cim.server.vo.req.SendMsgReqVO;
-import com.crossoverjie.cim.common.constant.Constants;
+import com.ten.cim.common.constant.Constants;
 import com.ten.cim.server.server.CIMServer;
 import com.ten.cim.server.vo.res.SendMsgResVO;
 import io.swagger.annotations.ApiOperation;

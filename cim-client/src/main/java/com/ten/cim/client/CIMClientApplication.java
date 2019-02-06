@@ -10,7 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author crossoverJie
+ * @author ten
  */
 @SpringBootApplication
 public class CIMClientApplication implements CommandLineRunner {

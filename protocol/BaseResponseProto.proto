@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package protocol;
 
-option java_package = "com.crossoverjie.cim.common.protocol";
+option java_package = "com.ten.cim.common.protocol";
 option java_outer_classname = "CIMResponseProto";
 
 message CIMResProtocol {

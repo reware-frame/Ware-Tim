@@ -1,6 +1,6 @@
 package com.ten.cim.server.vo.req;
 
-import com.crossoverjie.cim.common.req.BaseRequest;
+import com.ten.cim.common.req.BaseRequest;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;

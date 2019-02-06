@@ -1,7 +1,7 @@
 package com.ten.cim.client.service.impl;
 
 import com.ten.cim.client.client.CIMClient;
-import com.crossoverjie.cim.common.kit.HeartBeatHandler;
+import com.ten.cim.common.kit.HeartBeatHandler;
 import io.netty.channel.ChannelHandlerContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  * Date: 2019-01-20 17:16
  * @since JDK 1.8
  */

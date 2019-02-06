@@ -1,7 +1,7 @@
-package com.crossoverjie.cim.route.service.impl;
+package com.ten.cim.route.service.impl;
 
-import com.crossoverjie.cim.common.pojo.CIMUserInfo;
-import com.crossoverjie.cim.route.service.UserInfoCacheService;
+import com.ten.cim.common.pojo.CIMUserInfo;
+import com.ten.cim.route.service.UserInfoCacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -11,13 +11,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static com.crossoverjie.cim.route.constant.Constant.ACCOUNT_PREFIX;
-import static com.crossoverjie.cim.route.constant.Constant.LOGIN_STATUS_PREFIX;
+import static com.ten.cim.route.constant.Constant.ACCOUNT_PREFIX;
+import static com.ten.cim.route.constant.Constant.LOGIN_STATUS_PREFIX;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/12/24 11:06
  * @since JDK 1.8
  */

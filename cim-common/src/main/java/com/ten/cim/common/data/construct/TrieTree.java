@@ -1,17 +1,12 @@
 package com.ten.cim.common.data.construct;
 
-import com.crossoverjie.cim.common.util.StringUtil;
 import com.ten.cim.common.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Function:字典树字符前缀模糊匹配
- *
- * @author crossoverJie
- *         Date: 2019/1/7 18:58
- * @since JDK 1.8
+ * TODO 字典树字符前缀模糊匹配
  */
 public class TrieTree {
 
@@ -32,6 +27,23 @@ public class TrieTree {
      */
     private static final char LOWERCASE_STAR = 'G';
 
+    /**
+     * 字典树节点
+     */
+    private class Node {
+        /**
+         * 是否为最后一个字符
+         */
+        public boolean isEnd = false;
+
+        /**
+         * 如果只是查询，则不需要存储数据
+         */
+        public char data;
+
+        public Node[] children = new Node[CHILDREN_LENGTH];
+    }
+
     private Node root;
 
     public TrieTree() {
@@ -40,8 +52,6 @@ public class TrieTree {
 
     /**
      * 写入
-     *
-     * @param data
      */
     public void insert(String data) {
         this.insert(this.root, data);
@@ -55,10 +65,9 @@ public class TrieTree {
             if (Character.isUpperCase(aChar)) {
                 index = aChar - UPPERCASE_STAR;
             } else {
-                //小写就要 -71
+                // 小写就要 -71
                 index = aChar - LOWERCASE_STAR;
             }
-
 
             if (index >= 0 && index < CHILDREN_LENGTH) {
                 if (root.children[index] == null) {
@@ -68,12 +77,12 @@ public class TrieTree {
 
                 }
 
-                //最后一个字符设置标志
+                // 最后一个字符设置标志
                 if (i + 1 == chars.length) {
                     root.children[index].isEnd = true;
                 }
 
-                //指向下一节点
+                // 指向下一节点
                 root = root.children[index];
             }
 
@@ -83,9 +92,6 @@ public class TrieTree {
 
     /**
      * 递归深度遍历
-     *
-     * @param key
-     * @return
      */
     public List<String> prefixSearch(String key) {
         List<String> value = new ArrayList<String>();
@@ -151,8 +157,6 @@ public class TrieTree {
 
     /**
      * 查询所有
-     *
-     * @return
      */
     public List<String> all() {
         char[] chars = new char[MAX_CHAR_LENGTH];
@@ -204,21 +208,4 @@ public class TrieTree {
     }
 
 
-    /**
-     * 字典树节点
-     */
-    private class Node {
-        /**
-         * 是否为最后一个字符
-         */
-        public boolean isEnd = false;
-
-        /**
-         * 如果只是查询，则不需要存储数据
-         */
-        public char data;
-
-        public Node[] children = new Node[CHILDREN_LENGTH];
-
-    }
 }

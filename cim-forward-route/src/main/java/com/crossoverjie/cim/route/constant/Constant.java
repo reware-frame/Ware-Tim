@@ -1,9 +1,9 @@
-package com.crossoverjie.cim.route.constant;
+package com.ten.cim.route.constant;
 
 /**
  * Function:
  *
- * @author crossoverJie
+ * @author ten
  *         Date: 2018/9/10 14:07
  * @since JDK 1.8
  */
