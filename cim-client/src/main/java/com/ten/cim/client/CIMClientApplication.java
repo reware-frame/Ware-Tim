@@ -10,7 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author ten
+ * 客户端
  */
 @SpringBootApplication
 public class CIMClientApplication implements CommandLineRunner {
@@ -26,10 +26,12 @@ public class CIMClientApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        // 启动输入扫描
         Scan scan = new Scan();
         Thread thread = new Thread(scan);
         thread.setName("scan-thread");
         thread.start();
         clientInfo.saveStartDate();
     }
+
 }

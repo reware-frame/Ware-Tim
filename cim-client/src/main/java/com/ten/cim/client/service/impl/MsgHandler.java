@@ -3,12 +3,10 @@ package com.ten.cim.client.service.impl;
 import com.ten.cim.client.client.CIMClient;
 import com.ten.cim.client.config.AppConfiguration;
 import com.ten.cim.client.service.*;
-import com.ten.cim.client.service.*;
 import com.ten.cim.client.vo.req.GroupReqVO;
 import com.ten.cim.client.vo.req.P2PReqVO;
 import com.ten.cim.client.vo.res.OnlineUsersResVO;
 import com.ten.cim.common.data.construct.TrieTree;
-import com.ten.cim.common.enums.SystemCommandEnum;
 import com.ten.cim.common.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,15 +20,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Function:
- *
- * @author ten
- * Date: 2018/12/26 11:15
- * @since JDK 1.8
+ * 消息处理器实现类
  */
 @Service
 public class MsgHandler implements MsgHandle {
     private final static Logger LOGGER = LoggerFactory.getLogger(MsgHandler.class);
+
     @Autowired
     private RouteRequest routeRequest;
 
@@ -50,7 +45,7 @@ public class MsgHandler implements MsgHandle {
     private ClientInfo clientInfo;
 
     @Autowired
-    private InnerCommandContext innerCommandContext ;
+    private InnerCommandContext innerCommandContext;
 
     private boolean aiModel = false;
 
@@ -65,13 +60,11 @@ public class MsgHandler implements MsgHandle {
 
     /**
      * 正常聊天
-     *
-     * @param msg
      */
     private void normalChat(String msg) {
         String[] totalMsg = msg.split(";;");
         if (totalMsg.length > 1) {
-            //私聊
+            // 私聊
             P2PReqVO p2PReqVO = new P2PReqVO();
             p2PReqVO.setUserId(configuration.getUserId());
             p2PReqVO.setReceiveUserId(Long.parseLong(totalMsg[0]));
@@ -83,7 +76,7 @@ public class MsgHandler implements MsgHandle {
             }
 
         } else {
-            //群聊
+            // 群聊
             GroupReqVO groupReqVO = new GroupReqVO(configuration.getUserId(), msg);
             try {
                 groupChat(groupReqVO);
@@ -95,8 +88,6 @@ public class MsgHandler implements MsgHandle {
 
     /**
      * AI model
-     *
-     * @param msg
      */
     private void aiChat(String msg) {
         msg = msg.replace("吗", "");
@@ -114,9 +105,7 @@ public class MsgHandler implements MsgHandle {
 
     @Override
     public void p2pChat(P2PReqVO p2PReqVO) throws Exception {
-
         routeRequest.sendP2PMsg(p2PReqVO);
-
     }
 
     @Override
@@ -130,26 +119,17 @@ public class MsgHandler implements MsgHandle {
 
     @Override
     public boolean innerCommand(String msg) {
-
         if (msg.startsWith(":")) {
-
             InnerCommand instance = innerCommandContext.getInstance(msg);
-            instance.process(msg) ;
-
+            instance.process(msg);
             return true;
-
         } else {
             return false;
         }
-
-
     }
-
 
     /**
      * 模糊匹配
-     *
-     * @param msg
      */
     private void prefixSearch(String msg) {
         try {
@@ -175,8 +155,6 @@ public class MsgHandler implements MsgHandle {
 
     /**
      * 查询聊天记录
-     *
-     * @param msg
      */
     private void queryChatHistory(String msg) {
         String[] split = msg.split(" ");
@@ -229,7 +207,7 @@ public class MsgHandler implements MsgHandle {
 
     @Override
     public void closeAIModel() {
-        aiModel = false ;
+        aiModel = false;
     }
 
     private void printAllCommand(Map<String, String> allStatusCode) {

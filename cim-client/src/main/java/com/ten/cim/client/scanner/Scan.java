@@ -10,14 +10,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 /**
- * Function:
- *
- * @author ten
- *         Date: 2018/12/21 16:44
- * @since JDK 1.8
+ * 输入扫描
  */
 public class Scan implements Runnable {
-
     private final static Logger LOGGER = LoggerFactory.getLogger(Scan.class);
 
     /**
@@ -25,37 +20,39 @@ public class Scan implements Runnable {
      */
     private AppConfiguration configuration;
 
-    private MsgHandle msgHandle ;
+    private MsgHandle msgHandle;
 
-    private MsgLogger msgLogger ;
+    private MsgLogger msgLogger;
 
     public Scan() {
         this.configuration = SpringBeanFactory.getBean(AppConfiguration.class);
-        this.msgHandle = SpringBeanFactory.getBean(MsgHandle.class) ;
-        this.msgLogger = SpringBeanFactory.getBean(MsgLogger.class) ;
+        this.msgHandle = SpringBeanFactory.getBean(MsgHandle.class);
+        this.msgLogger = SpringBeanFactory.getBean(MsgLogger.class);
     }
 
     @Override
     public void run() {
+        // 获取输入
         Scanner sc = new Scanner(System.in);
+        // 输入扫描
         while (true) {
             String msg = sc.nextLine();
 
-            //检查消息
+            // 检查消息
             if (msgHandle.checkMsg(msg)) {
                 continue;
             }
 
-            //系统内置命令
-            if (msgHandle.innerCommand(msg)){
+            // 系统内置命令
+            if (msgHandle.innerCommand(msg)) {
                 continue;
             }
 
-            //真正的发送消息
-            msgHandle.sendMsg(msg) ;
+            // 真正的发送消息
+            msgHandle.sendMsg(msg);
 
-            //写入聊天记录
-            msgLogger.log(msg) ;
+            // 写入聊天记录
+            msgLogger.log(msg);
 
             LOGGER.info("{}:【{}】", configuration.getUserName(), msg);
         }
