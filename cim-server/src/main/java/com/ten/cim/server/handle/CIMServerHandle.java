@@ -25,7 +25,17 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 
 /**
- * netty TODO
+ * CIM 服务端 Netty 消息处理器。
+ *
+ * <p>职责：
+ * <ul>
+ *   <li>LOGIN 消息：将客户端 requestId 与 NioSocketChannel 绑定至 SessionSocketHolder。</li>
+ *   <li>PING 心跳：更新最后活跃时间戳，并向客户端回写 PONG。</li>
+ *   <li>READER_IDLE 事件：由 IdleStateHandler 触发，委托 ServerHeartBeatHandlerImpl 检测客户端存活。</li>
+ *   <li>channelInactive：连接断开时清理会话并通知 cim-forward-route 清除路由信息。</li>
+ * </ul>
+ *
+ * <p>标注 {@code @ChannelHandler.Sharable} 是因为该 Handler 无状态字段，可安全地在多个 Channel 间共享。
  */
 @ChannelHandler.Sharable
 public class CIMServerHandle extends SimpleChannelInboundHandler<CIMRequestProto.CIMReqProtocol> {

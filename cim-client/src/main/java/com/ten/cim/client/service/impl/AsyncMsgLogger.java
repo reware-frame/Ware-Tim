@@ -47,7 +47,9 @@ public class AsyncMsgLogger implements MsgLogger {
         //开始消费
         startMsgLogger();
         try {
-            // TODO: 2019/1/6 消息堆满是否阻塞线程？
+            // BlockingQueue.put() 在队列满时会阻塞调用线程，直到有空位为止。
+            // 当前队列容量为 DEFAULT_QUEUE_SIZE=16，正常使用场景下不会长时间阻塞。
+            // 若需要非阻塞行为，可改用 blockingQueue.offer(msg) 丢弃超出消息。
             blockingQueue.put(msg);
         } catch (InterruptedException e) {
             LOGGER.error("InterruptedException", e);
