@@ -1,0 +1,107 @@
+version: '3.8'
+
+services:
+  # ========== 基础组件 ==========
+
+  redis:
+    image: redis:6-alpine
+    container_name: cim-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  zookeeper:
+    image: zookeeper:3.8-temurin
+    container_name: cim-zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888
+      ZOO_4LW_COMMANDS_WHITELIST: "*"
+    volumes:
+      - zookeeper_data:/data
+      - zookeeper_log:/datalog
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo ruok | nc localhost 2181 | grep imok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ========== CIM 服务 ==========
+
+  cim-forward-route:
+    image: eclipse-temurin:8-jre-alpine
+    container_name: cim-forward-route
+    depends_on:
+      redis:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./cim-forward-route/target/cim-forward-route-1.0.0-SNAPSHOT.jar:/app/app.jar
+    command: >
+      java -jar /app/app.jar
+      --app.zk.addr=zookeeper:2181
+      --spring.redis.host=redis
+      --spring.redis.port=6379
+    environment:
+      - JAVA_OPTS=-Xmx256m -Xms128m
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8083/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  cim-server:
+    image: eclipse-temurin:8-jre-alpine
+    container_name: cim-server
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+      cim-forward-route:
+        condition: service_healthy
+    ports:
+      - "8081:8081"
+      - "11211:11211"
+    volumes:
+      - ./cim-server/target/cim-server-1.0.0-SNAPSHOT.jar:/app/app.jar
+    command: >
+      java -jar /app/app.jar
+      --app.zk.addr=zookeeper:2181
+      --cim.server.port=11211
+      --cim.clear.route.request.url=http://cim-forward-route:8083/offLine
+    environment:
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8081/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+    driver: local
+  zookeeper_data:
+    driver: local
+  zookeeper_log:
+    driver: local
+
+networks:
+  default:
+    name: cim-network

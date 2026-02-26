@@ -18,15 +18,19 @@ import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ScanOptions;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.ten.cim.common.enums.StatusEnum.OFF_LINE;
 import static com.ten.cim.route.constant.Constant.ACCOUNT_PREFIX;
+import static com.ten.cim.route.constant.Constant.LOGIN_STATUS_PREFIX;
 import static com.ten.cim.route.constant.Constant.ROUTE_PREFIX;
 
 /**
@@ -172,15 +176,26 @@ public class AccountServiceRedisImpl implements AccountService {
         }
     }
 
+    /**
+     * 用户下线：使用 Lua 脚本原子地删除路由信息和登录状态，确保数据一致性。
+     * Lua 脚本保证 DEL route_key 和 SREM login_status_key userId 两步操作在 Redis 侧原子执行。
+     */
     @Override
     public void offLine(Long userId) throws Exception {
+        String luaScript =
+                "redis.call('del', KEYS[1]) " +
+                "redis.call('srem', KEYS[2], ARGV[1]) " +
+                "return 1";
 
-        // TODO: 2019-01-21 改为一个原子命令，以防数据一致性
+        DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
+        redisScript.setScriptText(luaScript);
+        redisScript.setResultType(Long.class);
 
-        //删除路由
-        redisTemplate.delete(ROUTE_PREFIX + userId) ;
-
-        //删除登录状态
-        userInfoCacheService.removeLoginStatus(userId);
+        List<String> keys = Arrays.asList(
+                ROUTE_PREFIX + userId,
+                LOGIN_STATUS_PREFIX
+        );
+        redisTemplate.execute(redisScript, keys, userId.toString());
+        LOGGER.info("用户[{}]已下线，路由信息和登录状态已原子清除", userId);
     }
 }

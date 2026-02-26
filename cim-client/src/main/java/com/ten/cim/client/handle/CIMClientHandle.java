@@ -76,7 +76,8 @@ public class CIMClientHandle extends SimpleChannelInboundHandler<CIMResponseProt
         if (scheduledExecutorService == null) {
             scheduledExecutorService = SpringBeanFactory.getBean("scheduledTask", ScheduledExecutorService.class);
         }
-        // TODO: 2019-01-22 后期可以改为不用定时任务，连上后就关闭任务 节省性能。
+        // 每 10 秒执行一次重连任务。ReConnectJob 在连接成功后会调用 future.cancel() 取消自身，
+        // 因此无需在此处额外关闭定时任务。
         scheduledExecutorService.scheduleAtFixedRate(new ReConnectJob(ctx), 0, 10, TimeUnit.SECONDS);
     }
 
